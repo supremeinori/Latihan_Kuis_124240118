@@ -10,6 +10,9 @@ class LibraryPage extends StatelessWidget {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.zero,
+        ),
         title: const Text('Konfirmasi Logout'),
         content: const Text('Apakah Anda yakin ingin keluar dari aplikasi?'),
         actions: [
@@ -28,6 +31,9 @@ class LibraryPage extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.redAccent,
               foregroundColor: Colors.white,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.zero,
+              ),
             ),
             child: const Text('Logout'),
           ),
@@ -71,8 +77,8 @@ class LibraryPage extends StatelessWidget {
                 return Card(
                   elevation: 2.5,
                   margin: const EdgeInsets.only(bottom: 12.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.zero,
                   ),
                   clipBehavior: Clip.antiAlias,
                   child: InkWell(
@@ -92,7 +98,7 @@ class LibraryPage extends StatelessWidget {
                         children: [
                           // Cover Buku dengan penanganan loading dan error
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.zero,
                             child: SizedBox(
                               width: 80,
                               height: 115,
@@ -195,7 +201,7 @@ class LibraryPage extends StatelessWidget {
                                       ),
                                       decoration: BoxDecoration(
                                         color: Colors.indigo.shade50,
-                                        borderRadius: BorderRadius.circular(4),
+                                        borderRadius: BorderRadius.zero,
                                       ),
                                       child: Text(
                                         book.genre,

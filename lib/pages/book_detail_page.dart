@@ -59,11 +59,11 @@ class BookDetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Cover Buku dengan Shadow & Rounded Corner
+            // Cover Buku dengan Shadow & Sudut Tajam (Rectangle)
             Center(
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.zero,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withValues(alpha: 0.15),
@@ -73,7 +73,7 @@ class BookDetailPage extends StatelessWidget {
                   ],
                 ),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.zero,
                   child: Image.network(
                     book.imageUrl,
                     height: 250,
@@ -137,7 +137,7 @@ class BookDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 14),
 
-            // Baris Rating, Genre, dan Halaman (Badge)
+            // Baris Rating, Genre, dan Halaman (Badge Tajam)
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -146,7 +146,7 @@ class BookDetailPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
                     color: Colors.amber.shade100,
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.zero,
                   ),
                   child: Row(
                     children: [
@@ -169,7 +169,7 @@ class BookDetailPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
                     color: Colors.indigo.shade50,
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.zero,
                   ),
                   child: Text(
                     book.genre,
@@ -187,7 +187,7 @@ class BookDetailPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
                     color: Colors.teal.shade50,
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.zero,
                   ),
                   child: Text(
                     '${book.year}',
@@ -202,11 +202,11 @@ class BookDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // Kartu Informasi Lengkap Buku
+            // Kartu Informasi Lengkap Buku (Sudut Tajam)
             Card(
               elevation: 2,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.zero,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -235,11 +235,11 @@ class BookDetailPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // Kartu Deskripsi / Sinopsis
+            // Kartu Deskripsi / Sinopsis (Sudut Tajam)
             Card(
               elevation: 2,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.zero,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
