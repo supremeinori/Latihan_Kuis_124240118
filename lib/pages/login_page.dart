@@ -77,8 +77,8 @@ class _LoginPageState extends State<LoginPage> {
             padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
             child: Card(
               elevation: 4,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.zero,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
@@ -119,12 +119,12 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: 'Email',
                           hintText: 'admin@gmail.com',
-                          prefixIcon: const Icon(Icons.email_outlined),
+                          prefixIcon: Icon(Icons.email_outlined),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.zero,
                           ),
                           filled: true,
                           fillColor: Colors.white,
@@ -158,8 +158,8 @@ class _LoginPageState extends State<LoginPage> {
                               });
                             },
                           ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                          border: const OutlineInputBorder(
+                            borderRadius: BorderRadius.zero,
                           ),
                           filled: true,
                           fillColor: Colors.white,
@@ -180,8 +180,8 @@ class _LoginPageState extends State<LoginPage> {
                           backgroundColor: Colors.indigo,
                           foregroundColor: Colors.white,
                           padding: const EdgeInsets.symmetric(vertical: 14),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.zero,
                           ),
                           elevation: 2,
                         ),
@@ -200,13 +200,13 @@ class _LoginPageState extends State<LoginPage> {
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           color: Colors.indigo.shade50,
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.zero,
                           border: Border.all(color: Colors.indigo.shade100),
                         ),
                         child: Column(
                           children: [
                             const Text(
-                              '💡 Akun Demo untuk Pengujian:',
+                              'Akun Demo untuk Pengujian:',
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
