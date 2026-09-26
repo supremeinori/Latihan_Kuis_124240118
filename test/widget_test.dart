@@ -1,30 +1,41 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:latihan_kuis/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('Halaman Login tampil dengan elemen lengkap', (WidgetTester tester) async {
+    // Bangun aplikasi
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Pastikan judul dan input tersedia
+    expect(find.text('Katalog Buku'), findsOneWidget);
+    expect(find.byType(TextFormField), findsNWidgets(2));
+    expect(find.widgetWithText(ElevatedButton, 'Login'), findsOneWidget);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+  testWidgets('Validasi form saat email dan password kosong', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+
+    // Tekan tombol login tanpa mengisi field
+    await tester.tap(find.widgetWithText(ElevatedButton, 'Login'));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verifikasi pesan error validasi muncul
+    expect(find.text('Email tidak boleh kosong'), findsOneWidget);
+  });
+
+  testWidgets('Pesan error muncul saat login dengan kredensial salah', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+
+    // Masukkan email dan password yang salah
+    await tester.enterText(find.byType(TextFormField).at(0), 'user_salah@gmail.com');
+    await tester.enterText(find.byType(TextFormField).at(1), 'salah123');
+
+    // Tekan tombol login
+    await tester.tap(find.widgetWithText(ElevatedButton, 'Login'));
+    await tester.pump();
+
+    // Verifikasi SnackBar kesalahan muncul
+    expect(find.text('Email atau password tidak sesuai!'), findsOneWidget);
   });
 }
