@@ -51,7 +51,7 @@ class LibraryPage extends StatelessWidget {
           'Daftar Buku',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.green,
         foregroundColor: Colors.white,
         actions: [
           IconButton(
@@ -200,7 +200,7 @@ class LibraryPage extends StatelessWidget {
                                         vertical: 2,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Colors.indigo.shade50,
+                                        color: Colors.green.shade50,
                                         borderRadius: BorderRadius.zero,
                                       ),
                                       child: Text(
@@ -208,7 +208,7 @@ class LibraryPage extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 11,
                                           fontWeight: FontWeight.w600,
-                                          color: Colors.indigo.shade700,
+                                          color: Colors.green.shade800,
                                         ),
                                       ),
                                     ),

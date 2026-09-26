@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                       const Icon(
                         Icons.menu_book_rounded,
                         size: 72,
-                        color: Colors.indigo,
+                        color: Colors.green,
                       ),
                       const SizedBox(height: 12),
                       const Text(
@@ -101,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Colors.indigo,
+                          color: Colors.green,
                         ),
                       ),
                       const SizedBox(height: 6),
@@ -177,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
                       ElevatedButton(
                         onPressed: _login,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.indigo,
+                          backgroundColor: Colors.green,
                           foregroundColor: Colors.white,
                           padding: const EdgeInsets.symmetric(vertical: 14),
                           shape: const RoundedRectangleBorder(
@@ -199,18 +199,18 @@ class _LoginPageState extends State<LoginPage> {
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade50,
+                          color: Colors.green.shade50,
                           borderRadius: BorderRadius.zero,
-                          border: Border.all(color: Colors.indigo.shade100),
+                          border: Border.all(color: Colors.green.shade200),
                         ),
                         child: Column(
                           children: [
-                            const Text(
+                            Text(
                               'Akun Demo untuk Pengujian:',
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.indigo,
+                                color: Colors.green.shade800,
                               ),
                             ),
                             const SizedBox(height: 4),
@@ -219,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 12,
-                                color: Colors.indigo.shade900,
+                                color: Colors.green.shade900,
                               ),
                             ),
                           ],

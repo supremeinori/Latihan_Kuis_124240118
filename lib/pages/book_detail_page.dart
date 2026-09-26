@@ -12,7 +12,7 @@ class BookDetailPage extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(icon, size: 18, color: Colors.indigo),
+          Icon(icon, size: 18, color: Colors.green),
           const SizedBox(width: 10),
           SizedBox(
             width: 110,
@@ -51,7 +51,7 @@ class BookDetailPage extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -168,13 +168,13 @@ class BookDetailPage extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: Colors.indigo.shade50,
+                    color: Colors.green.shade50,
                     borderRadius: BorderRadius.zero,
                   ),
                   child: Text(
                     book.genre,
                     style: TextStyle(
-                      color: Colors.indigo.shade800,
+                      color: Colors.green.shade800,
                       fontWeight: FontWeight.w600,
                       fontSize: 13,
                     ),
@@ -218,7 +218,7 @@ class BookDetailPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo,
+                        color: Colors.green,
                       ),
                     ),
                     const Divider(height: 18),
@@ -248,14 +248,14 @@ class BookDetailPage extends StatelessWidget {
                   children: [
                     const Row(
                       children: [
-                        Icon(Icons.description_outlined, color: Colors.indigo),
+                        Icon(Icons.description_outlined, color: Colors.green),
                         SizedBox(width: 8),
                         Text(
                           'Sinopsis',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            color: Colors.indigo,
+                            color: Colors.green,
                           ),
                         ),
                       ],
